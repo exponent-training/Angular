@@ -1,0 +1,31 @@
+
+<!-- <div class="jumbotron" style="background-color: blue;">
+  <p>I Check Bootstrap</p>
+  <button class="btn btn-danger">Check</button>
+</div> -->
+<div class="container" style="background: #9e9c9c; height: 400px;">
+    <h1>Add Angular Template Driven Form</h1>
+     <div class="col-sm-4">
+
+    <form #registerForm = "ngForm" (ngSubmit) = "onSubmit(registerForm)">
+
+         <div class="form-group">
+            <label>NAME</label>
+             <input type="text" class="form-control" name="customer.name" ngModel #name = 'ngModel' [(ngModel)]="customer.name" required>
+             <span *ngIf="name.invalid" class="error">Please Provide Name</span>
+            </div>
+         <br>
+
+         <div class="form-group">
+            <label>ADDRESS</label>
+             <input type="text" class="form-control" name="customer.address" ngModel #address = 'ngModel' [(ngModel)]="customer.address" required>
+             <span *ngIf="address.invalid" class="error">Please Provide Address</span>
+            </div>
+         <br>
+
+      <input type="submit" [disabled]="!registerForm.valid" class="btn btn-primary" value="Register">
+      <br>
+    </form>
+
+</div>
+</div>

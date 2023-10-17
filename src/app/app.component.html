@@ -1,0 +1,45 @@
+<!-- 
+ <h1>Add Validation in Angular Form</h1>
+<div class="col-sm-4">
+<form novalidate #registerform="ngForm" (ngSubmit)="onSubmit(registerform)">
+    <div class="form-group">
+    <label>NAME</label>
+    <input type="text" required  name="customer.name" ngModel #name = 'ngModel' [(ngModel)]="customer.name" placeholder="Please Enter Name"/>
+     <span *ngIf="name.touched || registerform.submitted)"> Please Enter Name</span>
+     <br>
+    </div>
+    <div class="form-group">
+     <label>ADDRESS</label>
+    <input type="text" class="form-control" name="customer.address" ngModel #address = 'ngModel' [(ngModel)]="customer.address"/>
+    <span class="help-block" *ngIf="(address.touched || registerform.submitted) && address.errors?.required"> Please Enter Address</span> -->
+    <!-- <br>
+  </div>
+  <div class="form-group">
+    <label>STANDARD</label>
+    <input type="text" class="form-control" name="customer.standard" [(ngModel)]="customer.standard"/>
+    <br>
+  </div> --> 
+
+    <!-- <form #userLogin = "ngForm" (ngSubmit) = "onSubmit(userLogin.value)">
+      <input type = "text" name = "emailid" placeholder = "Email Id" ngModel #emailid = 'ngModel' required>
+      <span class="help-block" *ngIf="!emailid.valid && emailid.touched">Please Fill The Email-Id</span>
+         <br/>
+         <input type = "password" name = "passwd" placeholder = "Password" ngModel #passwd =  'ngModel' required>
+         <span class="help-block" *ngIf="!passwd.valid && passwd.touched">Please Fill The Password</span>
+         <br/>
+         <input type = "submit" [disabled]="!userLogin.valid" value = "submit">
+      </form> -->
+
+  <!-- <input type="submit" class="btn btn-primary" [disabled]="!registerform.valid" value="Check">
+
+</form>
+</div> -->
+
+<!-- <div class="mt-4 p-5 bg-primary text-white rounded" style="height: calc(95vh);">
+  <h1>Angular 14 Bootstrap 5 Demo</h1>
+  <p class="lead">
+    This tutorial teaches you how to integrate Bootstrap 5 with Angular 14  
+  </p>
+</div> -->
+
+<app-register></app-register>
